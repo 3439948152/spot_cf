@@ -78,7 +78,7 @@ def poi_search(request):
         json_data = []
         for i in m:
             try:
-                if i['poiName'].find(f'{x}') != -1 or i['tagNameList'].find(f'{x}') != -1 or i['shortFeatures'].find(f'{x}') != -1:
+                if i['poiName'].find(f'{x}') != -1 or i['tagNameList'].find(f'{x}') != -1 or i['shortFeatures'].find(f'{x}') != -1 or i['sightLevelStr'].find(f'{x}'):
                     m1 = SpotInfo.objects.filter(pk=int(i['poiId']))
 
                     serial = SOPTSeriailzer(instance=m1, many=True)
