@@ -1,5 +1,5 @@
 from django.urls import path,include
-from .views import SPOTView,tagsView,buttonView,recommand,test_view
+from .views import SPOTView,tagsView,buttonView,recommand,test_view,poi_search
 
 urlpatterns=[
     path('spot/',SPOTView.as_view()),
@@ -7,6 +7,7 @@ urlpatterns=[
     path('commit/',buttonView.as_view()),
     path('recommend/',recommand.as_view()),
     path('1/',test_view),
+    path('search/',poi_search),
 ]
 '''
 http://127.0.0.1:8000/travel/spot  
@@ -30,4 +31,8 @@ http://127.0.0.1:8000/travel/commit/
 
 http://127.0.0.1:8000/travel/1
 显示upload.html页面，输入poiid,点击提交，得出十个景点的json数据
+
+
+http://127.0.0.1:8000/travel/search/
+景点搜索，基于名字和类别，可进行模糊搜索
 '''
