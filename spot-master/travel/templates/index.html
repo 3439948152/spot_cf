@@ -1,0 +1,15 @@
+<!--/test_view.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+	<form  method="post" action="">
+        {% csrf_token %}
+        <input type="text" name="poiid" value="动物园">
+        <input type="submit" value="搜索">
+    </form>
+</body>
+
+</html>
